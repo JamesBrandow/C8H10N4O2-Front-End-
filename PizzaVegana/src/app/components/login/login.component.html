@@ -1,0 +1,11 @@
+<h1>Pizza Vegana!</h1>
+
+<div *ngIf = "client == null">
+<input type = "text" placeholder="Username" [(ngModel)] = "username"> <br><br>
+<input type = "password" placeholder="Password" [(ngModel)] = "password"><br><br>
+<button id = "logInBtn" (click) = "loggedInbtn()">Log in</button>
+</div>
+
+<div *ngIf = "client">
+<app-mainpage></app-mainpage>
+</div>
