@@ -1,0 +1,120 @@
+<link rel="stylesheet" href="byoppage.component.css">
+
+<div class="center-screen">
+<h1>Pizza Vegana!</h1> 
+
+<h3>Nav bar goes here</h3>
+
+<table>
+    <tr>
+        <td colspan="3">Image of Pizza goes here</td>
+        <td></td>
+        <td></td>
+        <td>
+            <table>
+                <thead>
+                <tr>
+                    <th colspan="2">Selected Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>option 1</td>
+                    <button id="remove" class="button1" (click) = "testservice()">Remove</button>
+                </tr>
+                <tr>
+                    <td>option 2</td>
+                    <button id="remove" class="button1">Remove</button>
+                </tr>
+                <tr>
+                    <td>option 3</td>
+                    <button id="remove" class="button1">Remove</button>
+                </tr>
+            </tbody>
+            </table>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<div class="btn-group">
+<button id="prevPageBtn" class="button2">Previous Page</button>
+<button id="cancelBtn" class="button2">Cancel</button>
+<button id="addToOrderBtn" class="button2">Add to Order</button>
+<button id="goToCartBtn" class="button2">Go to Cart</button>
+</div>
+
+<hr>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Size/Crust</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Hand Tossed</td>
+            <button id="addToPizzaBtn" class="button3" (click) = "addItem(handTossed)">Add to Pizza</button>
+        </tr>
+        <tr>
+            <td>Thin Crust</td>
+            <button id="addToPizzaBtn" class="button3" (click) = "addItem(thinCrust)">Add to Pizza</button>
+        </tr>
+        <tr>
+            <td>option 3</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Cheese/Sauce</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>option 1</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+        <tr>
+            <td>option 2</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+        <tr>
+            <td>option 3</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">Toppings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>option 1</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+        <tr>
+            <td>option 2</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+        <tr>
+            <td>option 3</td>
+            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+        </tr>
+    </tbody>
+</table>
+
+</div>

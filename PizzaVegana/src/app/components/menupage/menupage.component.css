@@ -1,0 +1,41 @@
+.center-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button1 {
+    height: 30px;
+    width: 100px;
+}
+
+.button2 {
+    height: 50px;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, tr{
+    text-align: center;
+    border: 1px solid black;
+}
+
+th {
+    height: 50px;
+}
+
+tr {
+    height: 30px;
+    padding: 5px;
+}
+
+td {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
