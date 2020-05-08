@@ -22,5 +22,8 @@ export class Pizza{
         this.ticket = ticket;
 
     }
+
+  
+
     
 }

@@ -17,15 +17,6 @@ export class MainpageComponent implements OnInit {
 
 user = localStorage.getItem("user")
 
-loggedoutbtn():void{
-  console.log("Hits log out")
-  localStorage.clear()
-  this.router.navigate([' ']);
-
-
- 
- 
-}
     
 // show(){
 //   this. user = this.clientservice.userObject

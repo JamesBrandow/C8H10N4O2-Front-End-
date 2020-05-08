@@ -12,6 +12,7 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MainpageComponent,
     RegistrationComponent,
     CarouselComponent,
-    FooterComponent
+    FooterComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
