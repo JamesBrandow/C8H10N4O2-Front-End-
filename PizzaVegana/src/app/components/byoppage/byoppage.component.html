@@ -3,7 +3,22 @@
 <div class="center-screen">
 <h1>Pizza Vegana!</h1> 
 
-<h3>Nav bar goes here</h3>
+<nav class="navbar navbar-expand navbar-dark bg-success">
+    <div class="navbar-nav">
+        <h1>Pizza Vegana!</h1> 
+        <a class="nav-item nav-link" routerLink="/main"></a>
+        <a class="nav-item nav-link" routerLink="/main"></a>
+        <a class="nav-item nav-link" routerLink="/main">Home</a>
+        <a class="nav-item nav-link" routerLink="/byoppage">BYO Pizza</a>
+        <a class="nav-item nav-link" routerLink="/menu">Menu</a>
+        <a class="nav-item nav-link" routerLink="/history">Order History</a>
+        <a class="nav-item nav-link" routerLink="/checkout">Cart</a>
+        <a class="nav-item nav-link" routerLink="/about">About Us</a>
+        <a class="nav-item nav-link" routerLink="/contact">Contact Us</a>
+        <button id = "logInBtn" class="btn btn-success" (click) = "loggedoutbtn()">Log Out</button>
+        
+    </div>
+</nav>
 
 <table>
     <tr>
@@ -20,14 +35,6 @@
             <tbody>
                 <tr>
                     <td>option 1</td>
-                    <button id="remove" class="button1" (click) = "testservice()">Remove</button>
-                </tr>
-                <tr>
-                    <td>option 2</td>
-                    <button id="remove" class="button1">Remove</button>
-                </tr>
-                <tr>
-                    <td>option 3</td>
                     <button id="remove" class="button1">Remove</button>
                 </tr>
             </tbody>
@@ -41,7 +48,7 @@
 <div class="btn-group">
 <button id="prevPageBtn" class="button2">Previous Page</button>
 <button id="cancelBtn" class="button2">Cancel</button>
-<button id="addToOrderBtn" class="button2">Add to Order</button>
+<button id="addToOrderBtn" class="button2" (click) = "addToTicket()">Add to Order</button>
 <button id="goToCartBtn" class="button2">Go to Cart</button>
 </div>
 
@@ -62,10 +69,10 @@
             <td>Thin Crust</td>
             <button id="addToPizzaBtn" class="button3" (click) = "addItem(thinCrust)">Add to Pizza</button>
         </tr>
-        <tr>
+        <!-- <tr>
             <td>option 3</td>
             <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
 
@@ -79,23 +86,23 @@
     </thead>
     <tbody>
         <tr>
-            <td>option 1</td>
-            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+            <td>Vegan Mozzarella</td>
+            <button id="addToPizzaBtn" class="button3" (click) = "addItem(cheese1)">Add to Pizza</button>
         </tr>
         <tr>
-            <td>option 2</td>
-            <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
+            <td>Classic Marinara Sauce</td>
+            <button id="addToPizzaBtn" class="button3" (click) = "addItem(marinara)">Add to Pizza</button>
         </tr>
-        <tr>
+        <!-- <tr>
             <td>option 3</td>
             <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
-        </tr>
+        </tr> -->
     </tbody>
 </table>
 
 <hr>
 
-<table>
+<!-- <table>
     <thead>
         <tr>
             <th colspan="2">Toppings</th>
@@ -115,6 +122,6 @@
             <button id="addToPizzaBtn" class="button3">Add to Pizza</button>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 </div>

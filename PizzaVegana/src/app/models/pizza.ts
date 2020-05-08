@@ -9,8 +9,7 @@ export class Pizza{
     status : string
     ticket : Ticket
 
-    constructor(  items : Array<PizzaItems>,
-        pizzaId : number,
+    constructor( pizzaId : number,
         pizzaName : string,
         price : number,
         status : string,

@@ -5,6 +5,7 @@ export class PizzaItems{
     itemCost : number
     itemId : number
     itemName : String
+    pizzas :Array<Pizza>
 
     constructor(    
         category : string,
