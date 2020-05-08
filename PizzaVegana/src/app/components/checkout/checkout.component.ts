@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketserviceService } from 'src/app/services/ticketservice.service';
 import { Ticket } from 'src/app/models/ticket';
+import { Pizza } from 'src/app/models/pizza';
 
 @Component({
   selector: 'app-checkout',
@@ -21,11 +22,15 @@ export class CheckoutComponent implements OnInit {
     {"size": 'Medium', "pizzaName": 'BYO3', "dough": 'Hand Tossed', "sauce": 'Classic Marinara Sauce', "cheese": "Vegan Mozzarella", "toppings":['Spinach','Onion', 'Mushrooms'], "extras": ['Garlic Sauce','Basic Pesto'], "cost": 9.99}
    ];
 
-   ticketToPost:Ticket
+persistedTicket:Ticket
+persistedPizza:Pizza
 
    async submitNewTicket() {
-    this.ticketToPost = await this.ticketservice.createTicket()
-    console.log(this.ticketToPost)
+    this.persistedTicket = await this.ticketservice.createTicket()
+    // console.log(this.persistedTicket)
+    this.ticketservice.theTicket.pizzas.forEach((p) => {
+    this.persistedPizza = await this.ticketservice.createEachPizza(p)
+    })
    } 
 
 }
@@ -42,4 +47,3 @@ let pizzaArray: {
   cost: Number 
 }[] = [];
 let totalCost:Number;
-

@@ -28,7 +28,7 @@ export class ByoppageComponent implements OnInit {
     pizza.items = this.orderservice.currentPizzaItems
     this.orderservice.ticketItems.push(pizza)
     this.ticketservice.theTicket.pizzas = this.orderservice.ticketItems
-    console.log(this.ticketservice.theTicket)
+    // console.log(this.ticketservice.theTicket)
     this.orderservice.currentPizzaItems = []
   }
 

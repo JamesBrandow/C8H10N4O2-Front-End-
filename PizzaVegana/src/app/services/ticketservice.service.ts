@@ -3,6 +3,7 @@ import { Ticket } from '../models/ticket';
 import { Client } from '../models/client';
 import { ClientserviceService } from './clientservice.service';
 import { HttpClient } from '@angular/common/http';
+import { Pizza } from '../models/pizza';
 
 @Injectable({
   providedIn: 'root'
@@ -25,7 +26,29 @@ export class TicketserviceService {
   ).toPromise()
     return ticketpromise
   }
+
+  createEachPizza(p):Promise<Pizza> {
+    let pizzapromise:Promise<Pizza> = this.http.post<Pizza>(`http://localhost:9000/pizzas`,     
+{"pizzaId":0,
+"ticket":p.ticket,
+"price":p.price,
+"pizzaName":p.pizzaName,
+"status":"Unbaked",
+"items":p.items}).toPromise()
+
+return pizzapromise
+  }
  
  theTicket:Ticket
 
 }
+
+
+// {"pizzaId":3,"price":7.0,
+// "pizzaName":"Test Pizza 3",
+// "status":"Testing",
+// "items":[{"itemId":16,"itemName":"Spicy Chickpea","itemCost":0.99,"category":"topping"},
+// {"itemId":1,"itemName":"Hand Tossed","itemCost":0.0,"category":"dough"},
+// {"itemId":11,"itemName":"Vegan Four Cheese Blend","itemCost":0.0,"category":"cheese"},
+// {"itemId":23,"itemName":"Basic Pesto","itemCost":0.75,
+// "category":"extra"}]}
