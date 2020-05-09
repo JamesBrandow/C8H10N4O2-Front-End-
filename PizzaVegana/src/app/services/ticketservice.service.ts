@@ -13,36 +13,41 @@ export class TicketserviceService {
   constructor(private clientservice:ClientserviceService, private http:HttpClient) { }
 
   createTicket():Promise<Ticket> {
-    // let postTicket = JSON.stringify(this.theTicket)
-    let ticketpromise:Promise<Ticket> = this.http.post<Ticket>(`http://localhost:9000/tickets`, 
-    {"ticketId":0,
+
+    let jsonTicket = {"ticketId":0,
     "placementTime":"Time Test",
     "status":"Pending",
-    "note":"this is from a test run at 9:30 on a Thursday",
+    "note":"this is a test",
     "client":this.theTicket.client,
     "cost":this.theTicket.cost,
-    "pizzas":[{"pizzaId":0,"price":this.theTicket.pizzas[0].price,"pizzaName":this.theTicket.pizzas[0].pizzaName,
-    "status":"Unbaked"}]}
-  ).toPromise()
+    "pizzas":this.theTicket.pizzas}
+    console.log(jsonTicket)
+    // let postTicket = JSON.stringify(this.theTicket)
+    let ticketpromise:Promise<Ticket> = this.http.post<Ticket>(`http://localhost:9000/tickets`, jsonTicket).toPromise()
     return ticketpromise
   }
+  // this.ticketservice.theTicket.pizzas.forEach((p) => { })
 
-  createEachPizza(p):Promise<Pizza> {
-    let pizzapromise:Promise<Pizza> = this.http.post<Pizza>(`http://localhost:9000/pizzas`,     
-{"pizzaId":0,
-"ticket":p.ticket,
-"price":p.price,
-"pizzaName":p.pizzaName,
-"status":"Unbaked",
-"items":p.items}).toPromise()
+//   createEachPizza(p):Promise<Pizza> {
+//     let pizzapromise:Promise<Pizza> = this.http.post<Pizza>(`http://localhost:9000/pizzas`,     
+// {"pizzaId":0,
+// "ticket":p.ticket,
+// "price":p.price,
+// "pizzaName":p.pizzaName,
+// "status":"Unbaked",
+// "items":p.items}).toPromise()
 
-return pizzapromise
-  }
+// return pizzapromise
+//   }
+
+  
  
  theTicket:Ticket
 
 }
 
+// [{"pizzaId":0,"price":this.theTicket.pizzas[0].price,"pizzaName":this.theTicket.pizzas[0].pizzaName,
+//     "status":"Unbaked"}]
 
 // {"pizzaId":3,"price":7.0,
 // "pizzaName":"Test Pizza 3",

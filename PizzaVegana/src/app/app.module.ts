@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ByoppageComponent } from './components/byoppage/byoppage.component';
 import { MenupageComponent } from './components/menupage/menupage.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     FooterComponent,
     ByoppageComponent,
     MenupageComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

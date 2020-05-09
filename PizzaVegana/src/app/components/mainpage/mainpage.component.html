@@ -1,3 +1,4 @@
+  
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <style>
  
@@ -33,33 +34,19 @@ h1{
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap; /* assumes you only want one row */
+  
 }
-   
-
+#maindiv{
+    background-color: rgba(7, 7, 7, 0.26);  
 }
 </style>
-<!-- <div *ngIf ="user"> -->
+<div id="maindiv">
 
-<nav class="navbar navbar-expand navbar-dark bg-success">
-    <div class="navbar-nav">
-        <h1>Pizza Vegana!</h1> 
-        <a class="nav-item nav-link" routerLink="/main"></a>
-        <a class="nav-item nav-link" routerLink="/main"></a>
-        <a class="nav-item nav-link" routerLink="/main">Home</a>
-        <a class="nav-item nav-link" routerLink="/byoppage">BYO Pizza</a>
-        <a class="nav-item nav-link" routerLink="/menu">Menu</a>
-        <a class="nav-item nav-link" routerLink="/history">Order History</a>
-        <a class="nav-item nav-link" routerLink="/checkout">Cart</a>
-        <a class="nav-item nav-link" routerLink="/about">About Us</a>
-        <a class="nav-item nav-link" routerLink="/contact">Contact Us</a>
-        <button id = "logInBtn" class="btn btn-success" (click) = "loggedoutbtn()">Log Out</button>
-        
-    </div>
-</nav>
+<app-nav></app-nav>
 <h3> Welcome {{user}}!</h3>
 <app-carousel></app-carousel>
 <div style="padding: 20%;"></div>
 
 <app-footer></app-footer>
-<!-- 
-</div> -->
+
+</div>

@@ -25,13 +25,23 @@ export class CheckoutComponent implements OnInit {
 persistedTicket:Ticket
 persistedPizza:Pizza
 
-   async submitNewTicket() {
+
+// makeAllPost() {
+//      this.submitNewTicket()
+//      this.ticketservice.theTicket.pizzas.forEach((p) => {
+//       this.storePizza(p) })  
+// }
+  
+  async submitNewTicket() {
     this.persistedTicket = await this.ticketservice.createTicket()
-    // console.log(this.persistedTicket)
-    this.ticketservice.theTicket.pizzas.forEach((p) => {
-    this.persistedPizza = await this.ticketservice.createEachPizza(p)
-    })
-   } 
+    console.log(this.persistedTicket)
+  } 
+
+   
+  //  async storePizza(p) {
+  //   this.persistedPizza = await this.ticketservice.createEachPizza(p)
+  //   console.log(this.persistedPizza)
+  // }
 
 }
 

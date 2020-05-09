@@ -26,7 +26,7 @@ export class ClientserviceService {
 
   }
 
-  registerClient(username:string,password:string,email:string,phone:string,fname:string,lname:string):Promise<any>{
+  registerClient(username:string,password:string,email:string,fname:string,lname:string,phone:string):Promise<any>{
     let nuclientpromise:Promise<any> = this.http.post(`http://localhost:9000/clients`, {"clientId":0, "email":`${email}`,"firstName":`${fname}`,"lastName":`${lname}`, "password":`${password}`, "phone":`${phone}`, "username":`${username}`}).toPromise();
     console.log(nuclientpromise)
     return nuclientpromise

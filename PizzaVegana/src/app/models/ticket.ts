@@ -13,7 +13,7 @@ ticketId : number
 
     constructor(client:Client,cost:number,note:string,
         placementTime:string, status:string,ticketId:number){
-            this.client =client;
+            this.client = client;
             this.cost=cost;
             this.note=note;
             this.placementTime = placementTime;

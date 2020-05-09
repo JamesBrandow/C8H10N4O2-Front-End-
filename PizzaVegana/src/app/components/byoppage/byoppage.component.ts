@@ -24,7 +24,7 @@ export class ByoppageComponent implements OnInit {
   }
 
   addToTicket() {
-    let pizza = new Pizza( 0, "BYO pizza", 1, "pending", this.ticketservice.theTicket )
+    let pizza = new Pizza( 0, "BYO pizza", 1, "pending")
     pizza.items = this.orderservice.currentPizzaItems
     this.orderservice.ticketItems.push(pizza)
     this.ticketservice.theTicket.pizzas = this.orderservice.ticketItems
