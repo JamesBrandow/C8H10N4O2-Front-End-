@@ -23,3 +23,20 @@
     width: 100%;
     height: 100%;
   }
+  a{
+    color: black;
+    font-size: 1.2em;
+    font-weight: bolder;
+    position: absolute;
+    top: 100%;
+    left:30%;
+    bottom: 40%;
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding:0%;
+
+  }
+  a:hover{
+    color: rgb(253, 253, 253);
+  }

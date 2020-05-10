@@ -13,6 +13,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
+import { AccountComponent } from './components/account/account.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NavComponent } from './components/nav/nav.component';
     RegistrationComponent,
     CarouselComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,

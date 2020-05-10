@@ -20,8 +20,8 @@ export class ClientserviceService {
 
   }
 
-  registerClient(username:string,password:string,email:string,phone:string,fname:string,lname:string):Promise<any>{
-    let nuclientpromise:Promise<any> = this.http.post(`http://localhost:9000/clients`, {"clientId":0, "email":`${email}`,"firstName":`${fname}`,"lastName":`${lname}`, "password":`${password}`, "phone":`${phone}`, "username":`${username}`}).toPromise();
+registerClient(username:string,password:string,email:string,fname:string,lname:string,phone:string):Promise<any>{
+    let nuclientpromise:Promise<any> = this.http.post(`http://localhost:9000/clients`, {"clientId":0,  "firstName":`${fname}`,"lastName":`${lname}`, "email":`${email}`, "phone":`${phone}`,"username":`${username}`,"password":`${password}`}).toPromise();
     console.log(nuclientpromise)
     return nuclientpromise
   }
@@ -32,6 +32,12 @@ export class ClientserviceService {
     
     return clientpromise;
 
+  }
+
+  updateClient(username:string,password:string,email:string,fname:string,lname:string,phone:string):Promise<any>{
+    let upclientpromise:Promise<any> = this.http.put(`http://localhost:9000/updateclient`, {"clientId":this.userObject.clientId,  "firstName":`${fname}`,"lastName":`${lname}`, "email":`${email}`, "phone":`${phone}`,"username":`${username}`,"password":`${password}`}).toPromise();
+    console.log(upclientpromise)
+    return upclientpromise
   }
 
   

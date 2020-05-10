@@ -1,6 +1,8 @@
 import{Ticket} from 'src/app/models/ticket'
 import{UserRole} from 'src/app/models/userrole'
 
+//Client [clientId=0, firstName=Huxtable, lastName=333-333-3333, 
+//email=ch@huxlaw.org, phone=Claire, username=LuxyHuxy, password=1234567, userRole=null]
 export class Client{
     clientId : number
     email : string
@@ -18,7 +20,6 @@ export class Client{
         lastName : string,
         password : string,
         phone : string,
-        tickets : Array<Ticket>,
         username : string,
         userRole : UserRole){
         this.clientId = clientId;
@@ -27,7 +28,6 @@ export class Client{
         this.lastName =lastName;
         this.password = password;
         this.phone = phone;
-        this.tickets = tickets;
         this.username = username;
         this.userRole = userRole;
     }
