@@ -2,11 +2,11 @@
 #logdiv{
     margin: 0px;
     padding: 0%;
-    height: 100vh;
+    height: 50vw;
     width: 100vw;
     position: relative;
     text-align: center;
-    background-color: rgba(7, 7, 7, 0.363);  
+    background-color: rgba(7, 7, 7, 0.26);  
 }
 
 #logpic{
@@ -14,7 +14,7 @@
     padding: 0%;
     width: auto;
     height: 100%;
-    opacity: 70%;
+    opacity: 90%;
    
 }
 
@@ -26,13 +26,42 @@
   }
 
   h1{
-      font-family: Arial, Helvetica, sans-serif;
-      font-weight: 900;
-      font-style: italic;
-      color: rgb(0, 8, 1);
-      font-size: 2em;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-family: 'Anton', sans-serif;
+      /* font-family: 'Acme', sans-serif; */
+      font-weight: bolder;
+      font-style: oblique;
+      color: rgb(0, 0, 0);
+      font-size: 3em;
+      text-shadow: 2px 2px #fc0505;
   }
 
  #logInBtn{
      font-size: 1.5em;
+ }
+
+ p{
+     /* display: inline; */
+     color: rgb(239, 245, 239);
+     font-weight: bold;
+     margin-top: 10%;
+     margin-bottom: 10%;
+     font-size: 1.5em;
+ }
+ a{
+    color: rgb(254, 255, 254); 
+    font-weight: bold;
+    font-size: 1.2em;
+ }
+
+ #guest{
+     display: inline;
+     color:rgba(240, 243, 245, 0.336);
+ }
+
+ #logInBtng{
+     display: inline;
+     border: none;
+    color: rgba(240, 243, 245, 0.336);
+    background-color: rgba(128, 128, 128, 0.404);
  }

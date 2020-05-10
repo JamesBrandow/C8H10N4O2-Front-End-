@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientserviceService} from 'src/app/services/clientservice.service'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,11 +10,21 @@ import {ClientserviceService} from 'src/app/services/clientservice.service'
 })
 export class MainpageComponent implements OnInit {
 
-  constructor(private clientservice:ClientserviceService) { }
+  constructor(private router: Router, private clientservice:ClientserviceService) { }
 
   ngOnInit(): void {
   }
 
-  user = this.clientservice.userObject
+user = localStorage.getItem("user")
+
+    
+// show(){
+//   this. user = this.clientservice.userObject
+//   ()}
+
+
+   
+  //  console.log(user)
+
 
 }
