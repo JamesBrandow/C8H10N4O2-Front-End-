@@ -19,9 +19,9 @@ export class CarouselComponent implements OnInit {
   constructor() { }
   current = 0;
   img_list = [
-    'assets/images/greengoddesspizza.jpg/?image=0',
-    'assets/images/chicpeakadopizza.jpg/?image=1',
-    'assets/images/magherita.jpg/?image=2',
+    'assets/images/greengoddesspizza2.jpg/?image=0',
+    'assets/images/chicpeakadopizza2.jpg/?image=1',
+    'assets/images/magherita2.jpg/?image=2',
   ];
 
   ngOnInit(){

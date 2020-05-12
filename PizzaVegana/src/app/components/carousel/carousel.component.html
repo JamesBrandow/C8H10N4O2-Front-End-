@@ -1,11 +1,12 @@
 <div class="container">
-	<div class="slides">
+	<a class="nav-item nav-link" routerLink="/menupage">	<div class="slides">
 		<ng-container *ngFor="let img of img_list; let i = index">
 			<div class="slide" *ngIf="current == i" @fade>
-				<img class="img" [src]="img">
-				<a class="nav-item nav-link" routerLink="/menupage">Order Menu Items</a>
+				
+					<img class="img" [src]="img">
+				<!-- <a class="nav-item nav-link" routerLink="/menupage">Order Menu Items</a> -->
 			</div>
 		</ng-container>
-	</div>
+	</div></a>
 </div>
 
