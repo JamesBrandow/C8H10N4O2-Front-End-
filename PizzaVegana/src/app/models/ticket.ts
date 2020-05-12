@@ -11,12 +11,11 @@ placementTime : string
 status : string
 ticketId : number
 
-    constructor(client:Client,cost:number,note:string,pizzas:Array<Pizza>,
+    constructor(client:Client,cost:number,note:string,
         placementTime:string, status:string,ticketId:number){
             this.client =client;
             this.cost=cost;
             this.note=note;
-            this.pizzas = pizzas;
             this.placementTime = placementTime;
             this.status = status;
             this.ticketId = ticketId;

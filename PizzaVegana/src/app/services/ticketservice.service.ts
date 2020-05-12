@@ -27,6 +27,10 @@ export class TicketserviceService {
     return ticketpromise
     
   }
+  getTicket():Promise<Ticket>{
+    let ticketPromise:Promise<Ticket> = this.http.get<Ticket>(`http://localhost:9000/tickets/client/${this.theTicket.client.clientId}`).toPromise()
+    return ticketPromise
+  }
 
 
   

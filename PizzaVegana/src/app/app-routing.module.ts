@@ -7,6 +7,7 @@ import{AccountComponent} from './components/account/account.component';
 import{AboutactComponent} from './components/aboutact/aboutact.component';
 import {MenupageComponent} from './components/menupage/menupage.component';
 import {ByoppageComponent} from './components/byoppage/byoppage.component'
+import { OrderhistoryComponent } from './components/orderhistory/orderhistory.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path : "menupage" , component : MenupageComponent},
   {path : "byoppage" , component :ByoppageComponent},
   {path : "account" , component : AccountComponent},
+  {path: "orderhistory", component: OrderhistoryComponent},
   {path : "abt" , component : AboutactComponent},
   { path: '**', component: LoginComponent }
 

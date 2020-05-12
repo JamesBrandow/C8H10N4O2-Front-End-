@@ -1,0 +1,38 @@
+.class{
+
+    padding-left: 4%;
+    padding-top: 0%;
+}
+
+table, th, td{
+    border: 2px, solid green;
+}
+th, td {
+    border-bottom: 1px solid #ddd;
+  }
+h2{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Acme', sans-serif; */
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-shadow: 2px 2px #fc0505;
+    margin: 0%;
+    padding: 0%;
+   
+}
+
+.order{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Acme', sans-serif; */
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    font-size: 1.5em;
+    text-shadow: 2px 2px #fc0505;
+    margin: 0%;
+    padding: 0%;
+}

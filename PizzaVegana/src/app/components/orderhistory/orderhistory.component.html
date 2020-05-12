@@ -1,0 +1,23 @@
+<app-nav></app-nav>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+<h2>Order History</h2>
+
+
+<!-- <button (click) = "getTickets()">Get tickets</button> -->
+<div>
+<table *ngFor = "let ticket of tickets; index as i">
+        <td class="order">{{i + 1}}</td>
+        <tr *ngFor = "let pizza of ticket.pizzas">
+        
+        <th>{{pizza.pizzaName}}</th>
+        <td *ngFor = "let item of pizza.items" class="space">{{item.itemName}}</td>
+        <td>${{pizza.price}}</td>  
+        
+        </tr>
+        <td><button class="btn btn-success" (click) = "displayNewOrder(ticket)">Re-order</button></td> 
+
+</table>
+</div>
