@@ -15,7 +15,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AccountComponent } from './components/account/account.component';
 import { AboutactComponent } from './components/aboutact/aboutact.component';
-import { PhonePipe } from './pipes/phone.pipe';
+import { ByoppageComponent } from './components/byoppage/byoppage.component';
+import { MenupageComponent } from './components/menupage/menupage.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { PhonePipe } from './pipes/phone.pipe';
     NavComponent,
     AccountComponent,
     AboutactComponent,
-    PhonePipe
+    ByoppageComponent,
+    MenupageComponent,
+   
   ],
   imports: [
     BrowserModule,
