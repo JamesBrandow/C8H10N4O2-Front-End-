@@ -1,0 +1,68 @@
+.center-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button1 {
+    height: 25px;
+    width: 75px;
+}
+
+.button2 {
+    height: 40px;
+    width: 175px;
+}
+
+.btn-group .button3 {
+    height: 25px;
+    width: 125px;
+    float: left;
+}
+
+table {
+    width: 100%;
+   
+}
+
+table, th, tr{
+    text-align: center;
+    
+}
+
+th {
+    height: 60px;
+    background-color: lightgrey;
+}
+
+tr {
+    height: 50px;
+}
+
+.floatLeft { 
+    width: 50%; float: left; 
+}
+
+.floatRight {
+    width: 50%; float: right; 
+}
+
+.container { 
+    overflow: hidden; 
+}
+
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Acme', sans-serif; */
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-shadow: 2px 2px #fc0505;
+    margin: 0%;
+    padding: 0%;
+   
+}

@@ -1,0 +1,309 @@
+<link rel="stylesheet" href="byoppage.component.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<div class="center-screen">
+    <app-nav></app-nav>
+
+    <div class="container">
+        <div class="floatLeft">
+            <Table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Selected Options</th>
+                            <th>Total: {{sum | currency}}</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="order.currentPizzaItems">
+                        <tr *ngFor="let item of order.currentPizzaItems">
+                            <td>{{item.category}}</td>
+                            <td>{{item.itemName}}</td>
+                            <td>{{item.itemCost | currency}}</td>
+                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                <button id="removeItemPizzaBtn" class="btn btn-danger"
+                                    (click)="removeItem(item)">Remove</button>
+                            </div>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="btn-group" style="padding-top: 10px; padding-bottom: 10px;">
+                    <button id="addToOrderBtn" class="btn btn-success" style="margin-right: 16px;"
+                        (click)="addToTicket()">Add to
+                        Order</button>
+                    <button id="goToCartBtn" class="btn btn-success"> <a class="nav-item nav-link"
+                            routerLink="/checkout" style="color: white;">Go
+                            to Cart</a></button>
+                </div>
+            </Table>
+        </div>
+
+        <div class="floatRight">
+            <table>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Size</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><button id="addToPizzaBtn" class="btn btn-success"
+                                    (click)="addItem(order.size1)">Medium</button>
+                            </td>
+                            <td><button id="addToPizzaBtn" class="btn btn-success"
+                                    (click)="addItem(order.size2)">Large</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Crust</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Hand Tossed Crust</td>
+                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                <button id="addToPizzaBtn" class="btn btn-success"
+                                    (click)="addItem(order.handTossed)">Add
+                                    to
+                                    Pizza</button>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>Thin Crust</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.thinCrust)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Brooklyn Style Crust</td>
+                            <button id="addToPizzaBtn" class="btn btn-success"
+                                (click)="addItem(order.brooklynStyle)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Gluten Free Crust</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.glutenFree)">Add
+                                to
+                                Pizza</button>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Sauce</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Classic Marinara Sauce</td>
+                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.marinara)">Add
+                                    to
+                                    Pizza</button>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>Spicy Tomato Sauce</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.tomato)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Basil Pesto Sauce</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.pesto)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>BBQ Sauce</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.bbq)">Add to
+                                Pizza</button>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Cheese</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Vegan Mozzarella</td>
+                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.cheese1)">Add
+                                    to
+                                    Pizza</button>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>Vegan Shredded Blend</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.cheese2)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Vegan Four Cheese Blend</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.cheese3)">Add to
+                                Pizza</button>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Toppings</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Spinach</td>
+                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.Spinach)">Add
+                                    to
+                                    Pizza</button>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>Onions</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.Onion)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Roma Tomatoes</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.RomaTomatoes)">Add
+                                to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Mushrooms</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.Mushrooms)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Spicy Chickpeas</td>
+                            <button id="addToPizzaBtn" class="btn btn-success"
+                                (click)="addItem(order.SpicyChickpea)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Pickled Fresno Chilli</td>
+                            <button id="addToPizzaBtn" class="btn btn-success"
+                                (click)="addItem(order.PickledFresnoChilli)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Banana Peppers</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.BananaPepper)">Add
+                                to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Basil</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.Basil)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Pineapple</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.Pineapple)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Olives</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.Olives)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Mixd Greens</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.mixdGreen)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Chickpeas</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.chickpea)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Avocado</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.avocado)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Beyond Meat 'Beef'</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order. beef)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Yves Veggie Pepperoni</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.pepperoni)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Beyond Meat 'Sausage'</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.sausage)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Delicious Plant-Based 'Chicken'</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.chicken)">Add to
+                                Pizza</button>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Dip</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Garlic Sauce</td>
+                            <div style="padding-top: 10px; padding-bottom: 10px;">
+                                <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.dip1)">Add to
+                                    Pizza</button>
+                            </div>
+                        </tr>
+                        <tr>
+                            <td>Basic Pesto</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.dip2)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Olive Oil</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.dip3)">Add to
+                                Pizza</button>
+                        </tr>
+                        <tr>
+                            <td>Buffalo Sauce</td>
+                            <button id="addToPizzaBtn" class="btn btn-success" (click)="addItem(order.dip4)">Add to
+                                Pizza</button>
+                        </tr>
+                    </tbody>
+                </table>
+            </table>
+        </div>
+    </div>
+
+    <app-footer></app-footer>
+
+</div>
