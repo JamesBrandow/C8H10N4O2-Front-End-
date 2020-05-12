@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="login.component.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Acme&family=Anton&display=swap" rel="stylesheet">
+
+<div id="logdiv"  *ngIf = "client == null">
+    <img id="logpic" src="assets\images\greengoddesspizza.jpg" alt="green goddess pizza">
+    <div class="centered">
+        <h1>Pizza Vegana!</h1> 
+        <input type = "text" placeholder="Username" [(ngModel)] = "username"> <br><br>
+        <input type = "password" placeholder="Password" [(ngModel)] = "password"><br><br>
+        <button id = "logInBtn" class="btn btn-success" (click) = "loggedInbtn()">Log in</button>
+        <hr>
+       <p>Not registered yet?    <a routerLink="/register"> Register</a> </p>
+       <p id="guest">Continue as guest...</p><button id = "logInBtng" (click) = "loggedInbtng()">Order</button>
+    </div>
+   
+</div> 
+
+
+
+
+<!-- <div *ngIf = "client">
+<app-mainpage></app-mainpage>
+</div> -->
+
+
