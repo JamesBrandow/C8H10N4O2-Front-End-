@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="menupage.component.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<div class="center-screen">
+<app-nav></app-nav>
+
+<hr>
+
+<button id="byoPizzaBtn" class="button2"><a class="nav-item nav-link" routerLink="/byoppage" style="color: black; font-weight: bolder; font-size: larger;" class="element1">Build your own Pizza</a></button>
+
+<hr>
+
+<table>
+    <thead>
+        <th colspan="4"><h1>Pizza Vegana Menu</h1></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td><img id="logpic" src="assets\images\greengoddesspizza.jpg" alt="green goddess pizza"></td>
+            <td style="text-align: left; text-align: start;">
+                <h3>Green Goddess Pizza</h3>
+                <h6 style="font-style: italic;">Glutern Free Crust, Basil Pesto Sauce, Mixed Greens, and Olive Oil</h6>
+            </td>
+            <td style="font-weight: bold;">
+                M: $14.23 <br>
+                L: $16.23
+            </td>
+            <td>
+                <button id="menu1Btn" class="btn btn-success" style="margin-right: 16px;" (click) = "addGreenGoddessMToTicket()"> Order Medium </button>
+                <button id="menu1Btn" class="btn btn-success" (click) = "addGreenGoddessLToTicket()"> Order Large </button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="https://wellandfull.com/wp-content/uploads/2018/01/healthyveganpizza-1.jpg" alt="chickpea"></td>
+            <td style="text-align: left;">
+                <h3>Chickpea Kado Pizza</h3>
+                <h6 style="font-style: italic;">Brooklyn Style Crust, Spicy Tomato Sauce, Vegan Four Cheese Blend, Spinach, Avocado</h6>
+            </td>
+            <td style="font-weight: bold;">
+                M: $11.97 <br>
+                L: $13.97
+            </td>
+            <td>
+                <button id="menu2Btn" class="btn btn-success" style="margin-right: 16px;" (click) = "addChickpeaKadoMToTicket()"> Order Medium </button>
+                <button id="menu2Btn" class="btn btn-success" (click) = "addChickpeaKadoLToTicket()"> Order Large </button>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="https://www.veganricha.com/wp-content/uploads/2019/09/Vegan-Margherita-Pizza-veganricha-9522-001-500x500.jpg" alt="margherita"></td>
+            <td style="text-align: left;">
+                <h3>Margherita Pizza</h3>
+                <h6 style="font-style: italic;">Hand Tossed Crust, Classic Marinara Sauce, Vegan Mozzarella, Roma Tomatoes, Basil</h6>
+            </td>
+            <td style="font-weight: bold;">
+                M: $11.97 <br>
+                L: $13.97
+            </td>
+            <td>
+                <button id="menu3Btn" class="btn btn-success" style="margin-right: 16px;" (click) = "addMargheritaMToTicket()"> Order Medium </button>
+                <button id="menu3Btn" class="btn btn-success" (click) = "addMargheritaLToTicket()"> Order Large </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<button id="goToCartBtn" class="btn btn-success"><a class="nav-item nav-link" routerLink="/checkout" style="color: white;">Go to Cart</a></button>
+
+<app-footer></app-footer>
+
+</div>
