@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {ClientserviceService} from 'src/app/services/clientservice.service'
+import {TicketserviceService} from 'src/app/services/ticketservice.service'
 import { Router } from '@angular/router';
+import { Ticket } from 'src/app/models/ticket';
+import { Pizza } from 'src/app/models/pizza';
+
 
 @Component({
   selector: 'app-login',
@@ -9,7 +13,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router, private clientservice:ClientserviceService) { }
+  constructor(private router: Router, private clientservice:ClientserviceService, private ticketservice:TicketserviceService) { }
 
   ngOnInit(): void {
   }
@@ -20,6 +24,7 @@ export class LoginComponent implements OnInit {
   gusername = "Guest";
   gpassword="guest";
 
+testTicket:Ticket
 
   
   
@@ -29,6 +34,9 @@ export class LoginComponent implements OnInit {
     this.client = await this.clientservice.authClient(this.username,this.password)
     this.clientservice.userObject = this.client
     localStorage.setItem("user", this.client.username);
+    this.testTicket = new Ticket(this.client,0,"test","5oclock", "Pending", 0)
+    this.ticketservice.theTicket = this.testTicket
+    console.log(this.testTicket)
     if(this.client) this.router.navigate(['/main']);
   }
 
@@ -39,6 +47,8 @@ export class LoginComponent implements OnInit {
     // console.log(this.client.userRole)
     this.clientservice.userObject = this.client
     localStorage.setItem("user", this.client.username);
+    this.testTicket = new Ticket(this.client,100,"test","5oclock", "Pending", 1)
+    console.log(this.testTicket)
     if(this.client) this.router.navigate(['/main']);
   }
 

@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "PizzaVegana"
+    }
+  },
+  "defaultProject": "PizzaVegana",
+  "cli": {
+    "analytics": "1ceab501-fed8-428b-b730-1616ac06a16a"
+  }
 }

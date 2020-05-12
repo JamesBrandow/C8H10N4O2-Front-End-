@@ -1,0 +1,39 @@
+  
+ 
+a{
+    font-size: 1.5em;
+}
+h3{
+    margin:2%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Acme', sans-serif; */
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-shadow: 2px 2px #fc0505;
+}
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Anton', sans-serif;
+    /* font-family: 'Acme', sans-serif; */
+    font-weight: bolder;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-shadow: 2px 2px #fc0505;
+    margin: 0%;
+    padding: 0%;
+   
+}
+ .navbar-nav {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* assumes you only want one row */
+  
+}
+#maindiv{
+    background-color: rgba(7, 7, 7, 0.26);  
+}

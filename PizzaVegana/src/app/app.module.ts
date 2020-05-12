@@ -12,8 +12,11 @@ import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ByoppageComponent } from './components/byoppage/byoppage.component';
+import { MenupageComponent } from './components/menupage/menupage.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { NavComponent } from './components/nav/nav.component';
-import { AccountComponent } from './components/account/account.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +26,11 @@ import { AccountComponent } from './components/account/account.component';
     RegistrationComponent,
     CarouselComponent,
     FooterComponent,
+    ByoppageComponent,
+    MenupageComponent,
+    CheckoutComponent,
     NavComponent,
-    AccountComponent
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,

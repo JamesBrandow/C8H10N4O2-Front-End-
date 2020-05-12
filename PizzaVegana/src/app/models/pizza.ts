@@ -7,23 +7,16 @@ export class Pizza{
     pizzaName : string
     price : number
     status : string
-    ticket : Ticket
 
-    constructor(  items : Array<PizzaItems>,
-        pizzaId : number,
+    constructor( pizzaId : number,
         pizzaName : string,
         price : number,
-        status : string,
-        ticket : Ticket){
+        status : string){
         this.pizzaId = pizzaId;
         this.pizzaName = pizzaName;
         this.price = price;
         this.status = status;
-        this.ticket = ticket;
 
     }
-
-  
-
     
 }

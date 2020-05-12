@@ -1,0 +1,22 @@
+<div id = "maindiv">
+<app-nav></app-nav>
+<h2 style="text-align: center; margin: 2% 0 2% 0;">Order Summary</h2>
+<div style="padding-left: 3%;">
+    <table class="table table-borderless" style="margin: 0 auto;">
+    <tr>
+        <td style="text-align: center; font-size: x-large;">Thanks. Your order was placed successfully. </td>
+    </tr>
+    <tr>
+        <td  style="text-align: center; font-size: x-large;">Your Order Number is: {{ticketNumber}}</td>
+    </tr>
+    </table>
+    <table class="table table-borderless" style="margin: 0 auto;">
+        <tr>
+            <td style="text-align: center; font-size: x-large;">
+                <Button id = "home" (click)="backToHome()" class="btn btn-success" >Home</Button>
+            </td>
+        </tr>
+    </table>
+   
+<app-footer></app-footer>
+</div>

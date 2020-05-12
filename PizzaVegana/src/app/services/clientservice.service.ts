@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { promise } from 'protractor';
+import{Client} from 'src/app/models/client'
 
 @Injectable({
   providedIn: 'root'  
@@ -10,6 +11,11 @@ export class ClientserviceService {
   constructor(private http:HttpClient) { }
 
   userObject:any;
+
+  // getClient(username:string):Promise<Client> {
+  //   let cPromise:Promise<Client> = this.http.get<Client>(`http://localhost:9000/client?username=${username}`).toPromise();
+  //   return cPromise;
+  // }
   
 
   authClient(username:string,password:string):Promise<any>{
@@ -20,8 +26,8 @@ export class ClientserviceService {
 
   }
 
-registerClient(username:string,password:string,email:string,fname:string,lname:string,phone:string):Promise<any>{
-    let nuclientpromise:Promise<any> = this.http.post(`http://localhost:9000/clients`, {"clientId":0,  "firstName":`${fname}`,"lastName":`${lname}`, "email":`${email}`, "phone":`${phone}`,"username":`${username}`,"password":`${password}`}).toPromise();
+  registerClient(username:string,password:string,email:string,fname:string,lname:string,phone:string):Promise<any>{
+    let nuclientpromise:Promise<any> = this.http.post(`http://localhost:9000/clients`, {"clientId":0, "email":`${email}`,"firstName":`${fname}`,"lastName":`${lname}`, "password":`${password}`, "phone":`${phone}`, "username":`${username}`}).toPromise();
     console.log(nuclientpromise)
     return nuclientpromise
   }
@@ -32,12 +38,6 @@ registerClient(username:string,password:string,email:string,fname:string,lname:s
     
     return clientpromise;
 
-  }
-
-  updateClient(username:string,password:string,email:string,fname:string,lname:string,phone:string):Promise<any>{
-    let upclientpromise:Promise<any> = this.http.put(`http://localhost:9000/updateclient`, {"clientId":this.userObject.clientId,  "firstName":`${fname}`,"lastName":`${lname}`, "email":`${email}`, "phone":`${phone}`,"username":`${username}`,"password":`${password}`}).toPromise();
-    console.log(upclientpromise)
-    return upclientpromise
   }
 
   

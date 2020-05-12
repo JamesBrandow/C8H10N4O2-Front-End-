@@ -5,7 +5,7 @@ export class PizzaItems{
     itemCost : number
     itemId : number
     itemName : String
-  
+    pizzas :Array<Pizza>
 
     constructor(    
         category : string,
@@ -16,7 +16,6 @@ export class PizzaItems{
         this.itemCost = itemCost;
         this.itemId = itemId;
         this.itemName = itemName;
-     
 
     }
     
