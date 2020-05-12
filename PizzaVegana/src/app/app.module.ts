@@ -17,6 +17,9 @@ import { AccountComponent } from './components/account/account.component';
 import { AboutactComponent } from './components/aboutact/aboutact.component';
 import { ByoppageComponent } from './components/byoppage/byoppage.component';
 import { MenupageComponent } from './components/menupage/menupage.component';
+import { OrderhistoryComponent } from './components/orderhistory/orderhistory.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 
 @NgModule({
@@ -32,6 +35,9 @@ import { MenupageComponent } from './components/menupage/menupage.component';
     AboutactComponent,
     ByoppageComponent,
     MenupageComponent,
+    OrderhistoryComponent,
+    CheckoutComponent,
+    ConfirmationComponent,
    
   ],
   imports: [

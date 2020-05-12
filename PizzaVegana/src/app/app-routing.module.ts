@@ -7,6 +7,9 @@ import{AccountComponent} from './components/account/account.component';
 import{AboutactComponent} from './components/aboutact/aboutact.component';
 import {MenupageComponent} from './components/menupage/menupage.component';
 import {ByoppageComponent} from './components/byoppage/byoppage.component'
+import { OrderhistoryComponent } from './components/orderhistory/orderhistory.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 
 
 const routes: Routes = [
@@ -16,7 +19,10 @@ const routes: Routes = [
   {path : "menupage" , component : MenupageComponent},
   {path : "byoppage" , component :ByoppageComponent},
   {path : "account" , component : AccountComponent},
+  {path: "orderhistory", component: OrderhistoryComponent},
   {path : "abt" , component : AboutactComponent},
+  {path : "checkout" , component : CheckoutComponent},
+  {path : "confirmation" , component : ConfirmationComponent},
   { path: '**', component: LoginComponent }
 
 ];

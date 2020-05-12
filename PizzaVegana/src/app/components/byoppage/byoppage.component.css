@@ -42,7 +42,12 @@ tr {
 }
 
 .floatLeft { 
-    width: 50%; float: left; 
+    width: 50%; 
+    float: left;
+    position: fixed; 
+    top: 10.7%;  
+    left:2%; 
+    right: 35%;
 }
 
 .floatRight {

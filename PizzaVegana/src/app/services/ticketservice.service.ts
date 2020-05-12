@@ -11,9 +11,15 @@ import { Pizza } from '../models/pizza';
 export class TicketserviceService {
 
   constructor(private clientservice:ClientserviceService, private http:HttpClient) { }
-
+  ngOnInit(): void {
+    //this keeps the total ticket price updated
+    this.theTicket.pizzas.forEach(pizza =>{
+      this.theTicket.cost = this.theTicket.cost + pizza.price;
+    });
+  }
+  returnedTicket:Ticket
+  totalTicketCost:number = 0;
   createTicket():Promise<Ticket> {
-
     let jsonTicket = {"ticketId":0,
     "placementTime":"Time Test",
     "status":"Pending",
@@ -26,6 +32,10 @@ export class TicketserviceService {
     let ticketpromise:Promise<Ticket> = this.http.post<Ticket>(`http://localhost:9000/tickets`, jsonTicket).toPromise()
     return ticketpromise
     
+  }
+  getTicket():Promise<Ticket>{
+    let ticketPromise:Promise<Ticket> = this.http.get<Ticket>(`http://localhost:9000/tickets/client/${this.theTicket.client.clientId}`).toPromise()
+    return ticketPromise
   }
 
 
