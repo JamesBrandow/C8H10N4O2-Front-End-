@@ -14,6 +14,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavComponent } from './components/nav/nav.component';
 import { AccountComponent } from './components/account/account.component';
+import { AboutactComponent } from './components/aboutact/aboutact.component';
+import { PhonePipe } from './pipes/phone.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AccountComponent } from './components/account/account.component';
     CarouselComponent,
     FooterComponent,
     NavComponent,
-    AccountComponent
+    AccountComponent,
+    AboutactComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,

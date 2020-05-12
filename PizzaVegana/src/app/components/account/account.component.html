@@ -1,7 +1,7 @@
 <app-nav></app-nav>
 
 <div class="regContainer">
-    <div id="formdiv" *ngIf = "nuclient==null">
+    <div id="formdiv" >
         <h1>Client Account</h1> 
   
         <svg class="bi bi-person" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@
         </svg>
         <input type = "text" placeholder="Phone" [(ngModel)] = "phone"><br><br>
   
-        <button id = "regBtn" class="btn btn-success" (click) = "updateBtn()">Update</button>
+        <button class="btn btn-success" (click) = "updateBtn()">Update</button>
   
       
     </div>

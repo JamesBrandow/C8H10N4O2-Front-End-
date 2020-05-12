@@ -1,0 +1,90 @@
+<style>
+ 
+    a{
+        font-size: 1.5em;
+    }
+    h3{
+        margin:2%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Anton', sans-serif;
+        font-weight: bolder;
+        font-style: oblique;
+        color: rgb(0, 0, 0);
+        font-size: 1.7em;
+        text-shadow: 2px 2px #fc0505;
+    }
+    h6{
+        font-size: 1em;
+        font-weight: bolder;
+        font-style: oblique;
+        margin:2%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Anton', sans-serif;
+        color: rgb(0, 0, 0)
+    }
+    h1{
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: 'Anton', sans-serif;
+        /* font-family: 'Acme', sans-serif; */
+        font-weight: bolder;
+        font-style: oblique;
+        color: rgb(0, 0, 0);
+        font-size: 2em;
+        text-shadow: 2px 2px #fc0505;
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 5%;
+    }
+   
+    #abtdiv{
+        background-color: rgba(7, 7, 7, 0.26);  
+    }
+    #infocontainer{
+        display: flex;
+       
+    }
+    #contact{
+        margin-left: 10%;
+    }
+    #about{
+        margin-left: 15%;
+        margin-right: 10%;
+    }
+    .gmap_canvas {overflow:hidden;
+        background:none!important;
+        height:200px;
+        width:350px;
+     margin-left: 5%;}
+    </style>
+<div id="abtdiv">
+    <app-nav></app-nav>
+    <h1>Pizza Vegana Aboutact!</h1>
+    <div id="infocontainer">
+        <div id="contact">
+            <h3>Phone: 212-333-6666</h3>
+            <h3>Email: pizzavegana@pizzavegana.com</h3>
+            <h3>Address: 65-30 Kissena Blvd, Flushing, NY 11367</h3>
+            <!-- <div class="mapouter"> -->
+                <div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=queens%20college&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+            <!-- </div> -->
+
+            <h6>Orders of more than 10 pizzas are considered catering and must be called in at least 24 hours in advance.</h6>
+
+        </div>
+        <div id="about">
+            <p style="font-size: 1.2em;">We proudly partner with local farmers. And because we see and speak to the farmers themselves on a weekly basis (3x a week for that matter!), 
+            we know when there has been a bad tomato crop or when organic cucumbers are flourishing, which allows us to tailor our menu accordingly. 
+            This creates a win-win situation for the farmers, for us and for our customers who can eat seasonal, organic and local food for the same cost (and sometimes cheaper than) the alternative.
+            Pizza Vegana’s founder, C8H10N4O2, were brought together on a small farm in upstate New York. Their trainer inspired a love for Spring boot, Angular 9, and Bootstrap. In addition to their affection for food and cooking, they are extremely passionate about animals and the environment.</p>
+
+        </div>
+    </div>
+
+    <div style="padding: 20%;"></div>
+
+    <app-footer></app-footer>
+
+    
+</div>

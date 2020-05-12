@@ -4,6 +4,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
 import{RegistrationComponent} from './components/registration/registration.component';
 import{AccountComponent} from './components/account/account.component'
+import{AboutactComponent} from './components/aboutact/aboutact.component'
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   {path : "main" , component : MainpageComponent},
   {path : "register" , component : RegistrationComponent},
   {path : "account" , component : AccountComponent},
+  {path : "abt" , component : AboutactComponent},
   { path: '**', component: LoginComponent }
 
 ];
