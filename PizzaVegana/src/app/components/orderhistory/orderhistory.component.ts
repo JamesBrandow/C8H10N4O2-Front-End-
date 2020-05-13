@@ -32,6 +32,7 @@ pizzas:Array<Pizza>
      console.log("Re-order ticket",ticket)
      ticket.pizzas.forEach(p => {
      p.pizzaId=0
+     p.status="unbaked"
      this.orderservice.ticketItems.push(p)    
      });
      console.log("Ticket items",this.orderservice.ticketItems)
